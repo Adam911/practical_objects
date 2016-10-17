@@ -21,14 +21,10 @@ function findItemsOver20(list, threshold) {
             });
         }
     }
-
     return over20;
 };
 
-//Test function
-//test variables saves output of function
 var listOne = findItemsOver20(itemList, 20);
-//compare the output
 
 console.log(findItemsOver20(itemList, 20));
 
