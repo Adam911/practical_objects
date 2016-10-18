@@ -12,13 +12,14 @@ shoppingList.push({
 
 // or like this
 
-// var barOne = {
-//     itemName : 'Bar One',
-//     qty : 3};
-//
-// shoppingList.push(barOne);
+var barOne = {
+    itemName : 'Bar One',
+    qty : 3};
+
+shoppingList.push(barOne);
 
 console.log('Shopping list: ');
+
 for(var i=0;i<shoppingList.length;i++){
     var listItem = shoppingList[i];
     console.log(listItem.itemName + " " + listItem.qty);
