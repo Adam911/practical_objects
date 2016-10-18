@@ -8,26 +8,28 @@ var itemList = [
 ];
 
 
+function findItemsOver20(list, threshold) {
+    var over20 = [];
 
-function findItemsOver20(objList) {
-    var objOver20 = [];
+    for (var i = 0; i < list.length; i++) {
+        var listName = list[i];
+        var price = listName.price;
 
-  for (var i = 0; i < objList.length; i++) {
-  var listObj20 = objList[i];
+        if (list[i].price > threshold) {
+            over20.push({
+                'Item': listName
+            });
+        }
+    }
+    return over20;
+};
+
+var listOne = findItemsOver20(itemList, 20);
+
+console.log(findItemsOver20(itemList, 20));
 
 
-  if (listObj20.price > 20 ) {
-    var 
 
-    console.log(listObj20);
-  }
-  }
-  return listObj20;
-}
-findItemsOver20(itemList);
-
-assert.equal(findItemsOver20(itemList),37)
-assert.equal(findItemsOver20(itemList),27)
 
 /*
 Write a function called findItemsOver20

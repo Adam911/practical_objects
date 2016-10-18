@@ -14,6 +14,13 @@ var shoppingList2 = [
     { itemName : 'Bread', price : 9.50 }
 ];
 
+var shoppingList3 = [
+    { itemName : 'Jeans', price : 160.50 },
+    { itemName : 'T-shirt', price :91.00 },
+    { itemName : 'Sneakers', price : 171.00 },
+    { itemName : 'Watch', price : 88.00 },
+
+];
 function shoppingList(itemList) {
   /*The var totCost is zero because
   when it is counted it must start counting
@@ -40,7 +47,7 @@ to run in.Then the price is taken from
   }
   //The argument is set into a console.log().And
   //diretly return after.
-  console.log('The following total costs of shopping for both lists are R'+totCost);
+  console.log('The following total costs of shopping for the lists calculated are R'+totCost);
   return totCost;
 }
 //Test it with the desired output needed firstly
@@ -48,3 +55,4 @@ to run in.Then the price is taken from
 // its too.
 assert.equal(shoppingList(shoppingList1),37.50);
 assert.equal(shoppingList(shoppingList2),58);
+assert.equal(shoppingList(shoppingList3),510.5);
