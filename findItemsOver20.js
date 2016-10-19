@@ -1,35 +1,43 @@
 const assert = require('assert');
 
-var itemList = [
-    {name : 'apples', price : 10},
-    {name : 'pears', price : 37},
-    {name : 'bananas', price : 27},
-    {name : 'apples', price : 3},
-];
+var itemList = [{
+  name: 'guava',
+  price: 3
+}, {
+  name: 'apples',
+  price: 10
+}, {
+  name: 'pears',
+  price: 37
+}, {
+  name: 'bananas',
+  price: 27
+}, ];
+
+function findItemsOver20(objList) {
+  var objOver20 = [];
+
+  for (var i = 0; i < objList.length; i++) {
+    var listObj20 = objList[i];
+    var thisPrice = listObj20.price
 
 
-function findItemsOver20(list, threshold) {
-    var over20 = [];
-
-    for (var i = 0; i < list.length; i++) {
-        var listName = list[i];
-        var price = listName.price;
-
-        if (list[i].price > threshold) {
-            over20.push({
-                'Item': listName
-            });
-        }
+    if (thisPrice > 20) {
+      // var objOf20 = thisPrice;
+      objOver20.push(listObj20);
     }
-    return over20;
-};
+  }
+  console.log(objOver20);
+  return objOver20;
+}
 
-var listOne = findItemsOver20(itemList, 20);
-
-console.log(findItemsOver20(itemList, 20));
-
-
-
+assert.deepEqual(findItemsOver20(itemList), [{
+  name: 'pears',
+  price: 37
+}, {
+  name: 'bananas',
+  price: 27
+}])
 
 /*
 Write a function called findItemsOver20
