@@ -21,7 +21,6 @@ function findItemsOver20(objList) {
     var listObj20 = objList[i];
     var thisPrice = listObj20.price
 
-
     if (thisPrice > 20) {
       // var objOf20 = thisPrice;
       objOver20.push(listObj20);

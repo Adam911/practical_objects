@@ -1,3 +1,5 @@
+const assert = require('assert')
+
 var salesData = [
     {department : 'hardware', sales : 4500, day : 'Monday'},
     {department : 'outdoor', sales : 1500, day : 'Monday'},
@@ -16,11 +18,22 @@ var salesData = [
     {department : 'carpentry', sales : 16109, day : 'Friday'},
 ];
 
+var totalDepartmentHardware = 0;
+var totalDepartmentOutdoor = 0;
+var totalDepartmentCarpentry = 0;
 
 function mostProfitableDepartment(depList) {
   for (var i = 0; i < depList.length; i++) {
     var sortdDep = depList[i]
-  console.log(sortdDep);
+    if (sortdDep === 'hardware' && sortdDep > ) {
+
+    }
+    else if (sortdDep === 'carpentry') {
+
+    }
+    else if (sortdDep === 'outdoor') {
+
+    }
   }
   return sortdDep;
 }
