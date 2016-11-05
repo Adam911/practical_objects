@@ -37,7 +37,6 @@ assert.deepEqual(findItemsOver20(itemList), [{
   name: 'bananas',
   price: 27
 }])
-
 /*
 Write a function called findItemsOver20
  that takes a list of objects,

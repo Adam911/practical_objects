@@ -1,4 +1,3 @@
-const assert = require(deepEqual);
 
 var shoppingList = [
     { itemName : '*Bread', price : 11.00 },
@@ -11,10 +10,8 @@ console.log("Shopping List: ");
   for (var i = 0; i < itemName.length; i++) {
     var listItems = itemName[i];
 
-    console.log(listItems.itemName +' @'+ " R" +listItems.price);
+    console.log(listItems.itemName +' @'+ " R " +listItems.price);
   }
   return listItems;
 }
 var objItems = printShoppingList(shoppingList)
-
-assert.deepEqual(,)

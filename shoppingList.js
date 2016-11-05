@@ -43,7 +43,6 @@ var shoppingList3 = [{
   },
 
 ];
-
 function shoppingList(itemList) {
   /*The var totCost is zero because
   when it is counted it must start counting

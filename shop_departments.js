@@ -25,7 +25,7 @@ var totalDepartmentCarpentry = 0;
 function mostProfitableDepartment(depList) {
   for (var i = 0; i < depList.length; i++) {
     var sortdDep = depList[i]
-    if (sortdDep === 'hardware' && sortdDep > ) {
+    if (sortdDep === 'hardware' && sortdDep.sales > totalDepartmentOutdoor && totalDepartmentCarpentry ) {
 
     }
     else if (sortdDep === 'carpentry') {
