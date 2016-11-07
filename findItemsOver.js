@@ -18,11 +18,8 @@ function findItemsOver(namePrice, threshold) {
   }
   return comparedPrice;
   }
-  console.log(findItemsOver(itemList, 9));
-  assert.deepEqual(findItemsOver(itemList, 9), [ {
-    name: 'apples',
-    price: 10
-  }, {
+  console.log(findItemsOver(itemList, 20));
+  assert.deepEqual(findItemsOver(itemList, 20), [{
     name: 'pears',
     price: 37
   }, {

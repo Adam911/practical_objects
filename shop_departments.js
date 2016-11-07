@@ -1,4 +1,6 @@
-const assert = require('assert')
+var totalDepOutdoorSales = 0;
+var totalDepCarpentrySales= 0;
+var totalDepHardwareSales= 0;
 
 var salesData = [
     {department : 'hardware', sales : 4500, day : 'Monday'},
@@ -18,26 +20,32 @@ var salesData = [
     {department : 'carpentry', sales : 16109, day : 'Friday'},
 ];
 
-var totalDepartmentHardware = 0;
-var totalDepartmentOutdoor = 0;
-var totalDepartmentCarpentry = 0;
 
 function mostProfitableDepartment(depList) {
   for (var i = 0; i < depList.length; i++) {
-    var sortdDep = depList[i]
-    if (sortdDep === 'hardware' && sortdDep.sales > totalDepartmentOutdoor && totalDepartmentCarpentry ) {
-
-    }
-    else if (sortdDep === 'carpentry') {
-
-    }
-    else if (sortdDep === 'outdoor') {
-
-    }
+  if (depList[i].department === 'carpentry') {
+    totalDepCarpentrySales =+ depList[i].sales;
   }
-  return sortdDep;
+  if (depList[i].department === 'outdoor') {
+    totalDepOutdoorSales =+ depList[i].sales
+  }
+  if (depList[i].department === 'hardware') {
+    totalDepHardwareSales =+ depList[i].sales
+  }
+ }
+ if (totalDepCarpentrySales > (totalDepHardwareSales && totalDepOutdoorSales)) {
+  console.log('Carpentry is the most profitable department');
+ }
+ else if (totalDepOutdoorSales > (totalDepCarpentrySales && totalDepHardwareSales)) {
+  console.log('Outdoor is the most profitable department');
+ }
+ else {
+   console.log('Hardware is the most profitable department');
+ }
+
 }
 mostProfitableDepartment(salesData);
+
 
 
 
