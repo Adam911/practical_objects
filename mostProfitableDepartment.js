@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 var totalDepOutdoorSales = 0 ;
 var totalDepCarpentrySales = 0;
 var totalDepHardwareSales = 0;
@@ -25,7 +27,9 @@ function mostProfitableDepartment(depList) {
   for (var i = 0; i < depList.length; i++) {
       var departmentName = depList[i][0];
       var departSales = depList[i][1];
-
+        /*Now looking for each name in the loop and assigning it to the variable and its sales key
+           (adding its keys together) to the total Department sales variable.
+      */
   if (departmentName === 'carpentry') {
     totalDepCarpentrySales =+ departSales;
   }
@@ -35,7 +39,7 @@ function mostProfitableDepartment(depList) {
   else if (departmentName === 'hardware') {
     totalDepHardwareSales =+ departSales;
   }
- }
+}//Now checking if the
  if (totalDepCarpentrySales > totalDepHardwareSales && totalDepCarpentrySales > totalDepOutdoorSales) {
   console.log('Carpentry is the most profitable department');
  }
@@ -48,7 +52,7 @@ function mostProfitableDepartment(depList) {
 }
 mostProfitableDepartment(salesData);
 
-
+assert.equal(mostProfitableDepartment,'Hardware is the most profitable department');
 
 
 /*

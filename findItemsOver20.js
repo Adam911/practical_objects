@@ -1,11 +1,10 @@
 const assert = require('assert');
 
-var itemList = [
-  {name: 'guava',price: 3},
+var itemList = 
+[{  name: 'guava',price: 3},
   {name: 'apples',price: 10},
   {name: 'pears',price: 37},
-  {name: 'bananas', price: 27},
- ];
+  {name: 'bananas', price: 27}, ];
 
 function findItemsOver20(objList) {
   var objOver20 = [];
@@ -19,7 +18,6 @@ function findItemsOver20(objList) {
       objOver20.push(listObj20);
     }
   }
-
   console.log(objOver20);
   return objOver20;
 }
