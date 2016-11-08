@@ -1,6 +1,6 @@
-var totalDepOutdoorSales = 0;
-var totalDepCarpentrySales= 0;
-var totalDepHardwareSales= 0;
+var totalDepOutdoorSales = 0 ;
+var totalDepCarpentrySales = 0;
+var totalDepHardwareSales = 0;
 
 var salesData = [
     {department : 'hardware', sales : 4500, day : 'Monday'},
@@ -26,23 +26,22 @@ function mostProfitableDepartment(depList) {
   if (depList[i].department === 'carpentry') {
     totalDepCarpentrySales =+ depList[i].sales;
   }
-  if (depList[i].department === 'outdoor') {
+  else if (depList[i].department === 'outdoor') {
     totalDepOutdoorSales =+ depList[i].sales
   }
-  if (depList[i].department === 'hardware') {
+  else  (depList[i].department === 'hardware') {
     totalDepHardwareSales =+ depList[i].sales
   }
  }
- if (totalDepCarpentrySales > (totalDepHardwareSales && totalDepOutdoorSales)) {
+ if (totalDepCarpentrySales > totalDepHardwareSales && totalDepCarpentrySales > totalDepOutdoorSales) {
   console.log('Carpentry is the most profitable department');
  }
- else if (totalDepOutdoorSales > (totalDepCarpentrySales && totalDepHardwareSales)) {
+ else if (totalDepOutdoorSales > totalDepCarpentrySales && totalDepOutdoorSales > totalDepHardwareSales) {
   console.log('Outdoor is the most profitable department');
  }
  else {
    console.log('Hardware is the most profitable department');
  }
-
 }
 mostProfitableDepartment(salesData);
 
