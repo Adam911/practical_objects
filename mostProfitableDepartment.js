@@ -23,14 +23,17 @@ var salesData = [
 
 function mostProfitableDepartment(depList) {
   for (var i = 0; i < depList.length; i++) {
-  if (depList[i].department === 'carpentry') {
-    totalDepCarpentrySales =+ depList[i].sales;
+      var departmentName = depList[i][0];
+      var departSales = depList[i][1];
+
+  if (departmentName === 'carpentry') {
+    totalDepCarpentrySales =+ departSales;
   }
-  else if (depList[i].department === 'outdoor') {
-    totalDepOutdoorSales =+ depList[i].sales
+  else if (departmentName === 'outdoor') {
+    totalDepOutdoorSales =+ departSales;
   }
-  else  (depList[i].department === 'hardware') {
-    totalDepHardwareSales =+ depList[i].sales
+  else if (departmentName === 'hardware') {
+    totalDepHardwareSales =+ departSales;
   }
  }
  if (totalDepCarpentrySales > totalDepHardwareSales && totalDepCarpentrySales > totalDepOutdoorSales) {
