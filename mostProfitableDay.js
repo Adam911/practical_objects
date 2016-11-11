@@ -1,4 +1,3 @@
-const assert = require('assert');
 
 var salesData = [
     {department : 'hardware', sales : 4500, day : 'Monday'},
@@ -17,52 +16,24 @@ var salesData = [
     {department : 'outdoor', sales : 12006, day : 'Friday'},
     {department : 'carpentry', sales : 16109, day : 'Friday'},];
 
-var totalSalesMonday = 0;
-var totalSalesTuesday = 0;
-var totalSalesWednesday = 0;
-var totalSalesThursday = 0;
-var totalSalesFriday = 0;
+var salesOfEachDay ={};
 
 
-function mostProfitableDay(profitableDay){
- for (var i = 0; i < profitableDay.length; i++) {
-    var salesDays= profitableDay[i][2];
-    var salesTotal = profitableDay[i][1]
-   if (profitableDay === 'Monday') {
-    totalSalesMonday +=  salesTotal;
-   }
-   else if (profitableDay === "Tuesday" ) {
-     totalSalesTuesday += salesTotal;
-   }
-   else if (profitableDay === "Wednesday") {
-     totalSalesWednesday += salesTotal;
-   }
-   else if (profitableDay === "Thursday") {
-     totalSalesThursday += salesTotal;
-   }
-   else if (profitableDay === "Friday") {
-     totalSalesFriday += salesTotal;
-   }
- }
- if (totalSalesMonday > (totalSalesTuesday && totalSalesWednesday &&
-  totalSalesThursday && totalSalesFriday)) {
-    console.log('Monday is the most profitable day in the week');
+function mostProfitableDay(weekdays){
+for (var i = 0; i < weekdays.length; i++) {
+
+  var profitableDay = weekdays[i]
+
+  if ( salesForEachDepartment[profitableDay.day] === undefined){
+          salesForEachDepartment[profitableDay.day] = 0;
+        }
+
+salesForEachDepartment[profitableDay.day] += (profitableDay.sales);
+
 }
-else if (totalSalesTuesday > (totalSalesMonday && totalSalesWednesday &&
- totalSalesThursday && totalSalesFriday)) {
-  console.log('Tuesday is the most profitable day in the week');
+console.log(salesForEachDepartment);
 }
-else if (totalSalesWednesday >(totalSalesMonday && totalSalesTuesday &&
- totalSalesThursday && totalSalesFriday)) {
-  console.log('Wednesday is the most profitable day in the week');
-}
-else if (totalSalesThursday > (totalSalesMonday && totalSalesTuesday &&
- totalSalesWednesday && totalSalesFriday)) {
-   console.log('Thursday is the most profitable day in the week');
-}
-else {
-  console.log('Friday is the most profitble day in the week');
-}
-}
+
+
+
 mostProfitableDay(salesData);
-assert.deepEqual(mostProfitableDay,'Thursday is the most profitable day in the week');

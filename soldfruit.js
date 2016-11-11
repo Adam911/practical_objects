@@ -2,7 +2,6 @@ var fruitString = 'Banana,Banana,Pear,Orange,Apple,Melon,Grape,Apple,Banana,Grap
 
 var fruitList = fruitString.split(',')
 var fruitMap = {};
-var high = 0;
 
    function soldfruits(){
     for (var i = 0; i < fruitList.length; i++) {
@@ -18,9 +17,6 @@ var high = 0;
 
 soldfruits(fruitMap);
 
-for (var fruits in fruitMap) {
-  if (fruitMap[fruits] > high ) {
-    high = fruitMap[fruits]
-  }
+for(var fruit in fruitMap){
+    console.log(fruit);
 }
-console.log(high);

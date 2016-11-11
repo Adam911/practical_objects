@@ -5,8 +5,9 @@ var car = {
     year : 2014,
     reg_number : 'CY 25913'
 };
+
 //dot notation
 console.log(car.make);
 
 //index notation
-console.log(car['make']);
+console.log(car['year']);
