@@ -1,3 +1,4 @@
+const assert = require ('assert');
 var salesData = [{
   department: 'hardware',
   sales: 4500,
@@ -92,5 +93,4 @@ function mostProfitableDepartment(salesList) {
   }
   console.log(depHighestProfit);
 }
-
 mostProfitableDepartment(salesData);

@@ -14,26 +14,32 @@ var salesData = [
     {department : 'carpentry', sales : 6109, day : 'Thursday'},
     {department : 'hardware', sales : 7005, day : 'Friday'},
     {department : 'outdoor', sales : 12006, day : 'Friday'},
-    {department : 'carpentry', sales : 16109, day : 'Friday'},];
+    {department : 'carpentry', sales : 16109, day : 'Friday'},
+  ];
 
-var salesOfEachDay ={};
-
+var dayForEachDepartment = {};
 
 function mostProfitableDay(weekdays){
 for (var i = 0; i < weekdays.length; i++) {
 
   var profitableDay = weekdays[i]
 
-  if ( salesForEachDepartment[profitableDay.day] === undefined){
-          salesForEachDepartment[profitableDay.day] = 0;
+  if ( dayForEachDepartment[profitableDay.day] === undefined){
+          dayForEachDepartment[profitableDay.day] = 0;
         }
-
-salesForEachDepartment[profitableDay.day] += (profitableDay.sales);
-
-}
-console.log(salesForEachDepartment);
-}
-
-
-
+dayForEachDepartment[profitableDay.day] += profitableDay.sales;
+    }
+  }
 mostProfitableDay(salesData);
+//ObjectMap holding the day's most sold on that specific day.
+var daySoldMost ={
+  day : '',
+  sales: 0
+};
+for (var daysWithSales in dayForEachDepartment){
+  if (dayForEachDepartment[daysWithSales] > daySoldMost.sales) {
+    daySoldMost.day = daysWithSales;
+    daySoldMost.sales = dayForEachDepartment[daysWithSales]
+  }
+}
+console.log(daySoldMost);
